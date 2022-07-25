@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/lucy/.cfg'
+let g:netrw_dirhist_4='/home/lucy/.config/i3'
+let g:netrw_dirhist_3='/home/lucy/Dropbox/Apps/Obsidian/Research/biblatex'
+let g:netrw_dirhist_2='/home/lucy/Dropbox/Apps/Obsidian/Research'
+let g:netrw_dirhist_1='/usr/share/defaults'
+let g:netrw_dirhist_0='/home/lucy/.local/share/applications'
+let g:netrw_dirhist_9='/home/lucy/.config/pulse'
+let g:netrw_dirhist_8='/home/lucy/Downloads'
+let g:netrw_dirhist_7='/home/lucy/Dropbox/tmp'
+let g:netrw_dirhist_6='/home/lucy/Dropbox/tmp/hw/cs300/P08/src'
