@@ -19,6 +19,7 @@ map <C-l> <C-w>l
 "Vim plug
 call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 
