@@ -23,11 +23,12 @@ call plug#end()
 
 
 
-"Java file format
+"File format
 :autocmd FileType java set shiftwidth=2 tabstop=2 expandtab
+:autocmd FileType cpp set shiftwidth=4 tabstop=4 expandtab
 
 
 " Quick compile
-autocmd FileType java nmap <buffer> <F5> :!make<CR>
-autocmd FileType cpp nmap <buffer> <F5> :!make<CR>
+autocmd FileType java nmap <buffer> <F5> :w!<CR>:!make<CR>
+autocmd FileType cpp nmap <buffer> <F5> :w!<CR>:!make<CR>
 
