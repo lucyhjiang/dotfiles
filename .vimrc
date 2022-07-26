@@ -27,6 +27,7 @@ call plug#end()
 :autocmd FileType java set shiftwidth=2 tabstop=2 expandtab
 
 
-" Java quick compile
+" Quick compile
 autocmd FileType java nmap <buffer> <F5> :!make<CR>
+autocmd FileType cpp nmap <buffer> <F5> :!make<CR>
 
