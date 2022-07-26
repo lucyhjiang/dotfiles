@@ -23,6 +23,10 @@ call plug#end()
 
 
 
-"Java cs300 syntax
+"Java file format
 :autocmd FileType java set shiftwidth=2 tabstop=2 expandtab
+
+
+" Java quick compile
+autocmd FileType java nmap <buffer> <F5> :!make<CR>
 
