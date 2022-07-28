@@ -157,4 +157,9 @@ tmuxdock () {
 	tmux attach-session -d -t Docker
 }
 
+alias vpnEngr='sudo openconnect --background --protocol=gp engr-full.vpn.wisc.edu --csd-wrapper=/usr/l    ibexec/openconnect/hipreport.sh'
+alias vpnDisconnect='mccleanUnmount; sudo killall -SIGINT openconnect'
+alias mccleanMount='mkdir ~/mccleanServer; sudo mount -t cifs -o rw,vers=2.0,credentials=/home/lucy/.s    mbcredentials,sec=ntlmssp,uid=lucy,gid=lucy //McCleanLab-N01.bme.wisc.edu/users/jiang68/ /home/lucy/mc    cleanServer/'
+alias mccleanUnmount='sudo umount mccleanServer/'
+
 unset TMUX
