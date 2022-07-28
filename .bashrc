@@ -137,3 +137,24 @@ alias todoist='nohup flatpak run com.todoist.Todoist & disown'
 alias imagej='nohup ~/apps/ImageJ/ImageJ & disown'
 alias discord='nohup flatpak run com.discordapp.Discord & disown'
 
+tmuxrs () {
+	# Use -d to allow the rest of the function to run
+	tmux new-session -d -s Remote
+	# -d to prevent current window from changing
+	tmux new-window -d -n Docker
+	# -d to detach any other client (which there shouldn't be,
+	# since you just created the session).
+	tmux attach-session -d -t Remote
+}
+
+tmuxdock () {
+	# Use -d to allow the rest of the function to run
+	tmux new-session -d -s Docker
+	# -d to prevent current window from changing
+	tmux new-window -d -n Project
+	# -d to detach any other client (which there shouldn't be,
+	# since you just created the session).
+	tmux attach-session -d -t Docker
+}
+
+unset TMUX
