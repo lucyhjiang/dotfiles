@@ -159,7 +159,7 @@ tmuxdock () {
 
 alias vpnEngr='sudo openconnect --background --protocol=gp engr-full.vpn.wisc.edu --csd-wrapper=/usr/libexec/openconnect/hipreport.sh'
 alias vpnDisconnect='mccleanUnmount; sudo killall -SIGINT openconnect'
-alias mccleanMount='mkdir ~/mccleanServer; sudo mount -t cifs -o rw,vers=2.0,credentials=/home/lucy/.smbcredentials,sec=ntlmssp,uid=lucy,gid=lucy //McCleanLab-N01.bme.wisc.edu/users/jiang68/ /home/lucy/mccleanServer/'
-alias mccleanUnmount='sudo umount mccleanServer/; rm -r mccleanServer'
+alias mccleanMount='mkdir ~/mccleanServer; sudo mount -t cifs -o rw,vers=2.0,credentials=/home/lucy/.smbcredentials,sec=ntlmssp,uid=lucy,gid=lucy //McCleanLab-N01.bme.wisc.edu/users/jiang68/ /home/lucy/mccleanServer/; cd /home/lucy/mccleanServer'
+alias mccleanUnmount='cd ~; sudo umount mccleanServer/; rm -r mccleanServer'
 
 unset TMUX
