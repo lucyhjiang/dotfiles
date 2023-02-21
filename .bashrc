@@ -125,7 +125,7 @@ alias mkdir='mkdir -p'
 
 #System
 alias apt-get='sudo apt-get'
-alias update='sudo apt-get update && sudo apt-get upgrade'
+alias update='sudo apt-get update && sudo apt-get upgrade && flatpak update'
 
 #Program shortcut
 alias dropbox='nohup flatpak run com.dropbox.Client & disown'
@@ -136,6 +136,7 @@ alias slack='nohup flatpak run com.slack.Slack & disown'
 alias todoist='nohup flatpak run com.todoist.Todoist & disown'
 alias imagej='nohup ~/apps/ImageJ/ImageJ & disown'
 alias discord='nohup flatpak run com.discordapp.Discord & disown'
+alias anki='nohup flatpak run net.ankiweb.Anki & disown'
 
 tmuxrs () {
 	# Use -d to allow the rest of the function to run
