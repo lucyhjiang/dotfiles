@@ -114,15 +114,6 @@ fi
 
 
 ### lucy
-#Activate vi mode
-set -o vi
-
-#Interactive 
-alias rm='rm -i'
-alias mv='mv -i'
-alias cp='cp -i'
-alias mkdir='mkdir -p'
-
 #System
 alias apt-get='sudo apt-get'
 alias update='sudo apt-get update && sudo apt-get upgrade && flatpak update'
@@ -131,12 +122,27 @@ alias update='sudo apt-get update && sudo apt-get upgrade && flatpak update'
 alias dropbox='nohup flatpak run com.dropbox.Client & disown'
 alias obsidian='nohup flatpak run md.obsidian.Obsidian & disown'
 alias zotero='nohup flatpak run org.zotero.Zotero & disown'
-alias joplin='nohup flatpak run net.cozic.joplin_desktop & disown'
-alias slack='nohup flatpak run com.slack.Slack & disown'
-alias todoist='nohup flatpak run com.todoist.Todoist & disown'
+#alias joplin='nohup flatpak run net.cozic.joplin_desktop & disown'
+#alias slack='nohup flatpak run com.slack.Slack & disown'
+#alias todoist='nohup flatpak run com.todoist.Todoist & disown'
 alias imagej='nohup ~/apps/ImageJ/ImageJ & disown'
-alias discord='nohup flatpak run com.discordapp.Discord & disown'
-alias anki='nohup flatpak run net.ankiweb.Anki & disown'
+#alias discord='nohup flatpak run com.discordapp.Discord & disown'
+#alias anki='nohup flatpak run net.ankiweb.Anki & disown'
+
+#Vpn and server mount
+alias vpnEngr='sudo openconnect --background --protocol=gp engr-full.vpn.wisc.edu --csd-wrapper=/usr/libexec/openconnect/hipreport.sh'
+alias vpnDisconnect='mccleanUnmount; sudo killall -SIGINT openconnect'
+alias mccleanMount='mkdir ~/mccleanServer; sudo mount -t cifs -o rw,vers=2.0,credentials=/home/lucy/.smbcredentials,sec=ntlmssp,uid=lucy,gid=lucy //McCleanLab-N01.bme.wisc.edu/users/jiang68/ /home/lucy/mccleanServer/; cd /home/lucy/mccleanServer'
+alias mccleanUnmount='cd ~; sudo umount mccleanServer/; rm -r mccleanServer'
+
+#Activate vi mode
+set -o vi
+
+#Interactive 
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+alias mkdir='mkdir -p'
 
 tmuxrs () {
 	# Use -d to allow the rest of the function to run
@@ -157,10 +163,5 @@ tmuxdock () {
 	# since you just created the session).
 	tmux attach-session -d -t Docker
 }
-
-alias vpnEngr='sudo openconnect --background --protocol=gp engr-full.vpn.wisc.edu --csd-wrapper=/usr/libexec/openconnect/hipreport.sh'
-alias vpnDisconnect='mccleanUnmount; sudo killall -SIGINT openconnect'
-alias mccleanMount='mkdir ~/mccleanServer; sudo mount -t cifs -o rw,vers=2.0,credentials=/home/lucy/.smbcredentials,sec=ntlmssp,uid=lucy,gid=lucy //McCleanLab-N01.bme.wisc.edu/users/jiang68/ /home/lucy/mccleanServer/; cd /home/lucy/mccleanServer'
-alias mccleanUnmount='cd ~; sudo umount mccleanServer/; rm -r mccleanServer'
 
 unset TMUX
