@@ -7,9 +7,6 @@ set splitbelow splitright
 " input setting
 set wildmode=longest,list,full
 
-" g
-let g:vimtex_view_method = 'zathura'
-
 "Shortcuts split navigation, saving a key press:
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -18,7 +15,6 @@ map <C-l> <C-w>l
 
 "Vim plug
 call plug#begin('~/.vim/plugged')
-Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
