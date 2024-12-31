@@ -28,5 +28,5 @@ call plug#end()
 autocmd FileType java nmap <buffer> <F5> :w!<CR>:!make<CR>
 autocmd FileType cpp nmap <buffer> <F5> :w!<CR>:!make<CR>
 
-" tex related
+" tex related setting
 " let g:vimtex_view_method = 'skim'
