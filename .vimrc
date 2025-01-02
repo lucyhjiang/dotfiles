@@ -20,7 +20,7 @@ call plug#end()
 
 "File format
 :autocmd FileType java set shiftwidth=2 tabstop=2 expandtab
-:autocmd FileType js set shiftwidth=2 tabstop=2 expandtab
+:autocmd FileType javascript set shiftwidth=2 tabstop=2 expandtab
 :autocmd FileType cpp set shiftwidth=4 tabstop=4 expandtab
 
 
@@ -28,5 +28,5 @@ call plug#end()
 autocmd FileType java nmap <buffer> <F5> :w!<CR>:!make<CR>
 autocmd FileType cpp nmap <buffer> <F5> :w!<CR>:!make<CR>
 
-" tex related settings
+" tex related
 " let g:vimtex_view_method = 'skim'
