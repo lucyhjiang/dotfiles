@@ -2,6 +2,9 @@
 syntax on
 set number relativenumber
 set splitbelow splitright
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " input setting
 set wildmode=longest,list,full
@@ -22,6 +25,7 @@ call plug#end()
 :autocmd FileType java set shiftwidth=2 tabstop=2 expandtab
 :autocmd FileType javascript set shiftwidth=2 tabstop=2 expandtab
 :autocmd FileType cpp set shiftwidth=4 tabstop=4 expandtab
+:autocmd FileType py set shiftwidth=4 tabstop=4 expandtab
 
 
 " Quick compile
@@ -30,3 +34,4 @@ autocmd FileType cpp nmap <buffer> <F5> :w!<CR>:!make<CR>
 
 " tex related
 " let g:vimtex_view_method = 'skim'
+" let g:vimtex_compiler_latexmk = { 'aux_dir' : 'aux' }
